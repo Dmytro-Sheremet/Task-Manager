@@ -3,13 +3,13 @@ import React from "react";
 const TaskList = props => {
 	const tasks = props.props.tasks.map((task, index) => {
 		return (
-			<tr>
+			<tr key={index}>
 				<td>{task.id}</td>
 				<td>{task.client}</td>
 				<td>{task.priority}</td>
 				<td>{task.machine}</td>
 				<td>{task.taskText}</td>
-			 	<td>{task.dateAdded}</td>
+				<td>{task.dateAdded}</td>
 				<td>{task.status}</td>
 				<td>{task.dateDeadline}</td>
 			</tr>
@@ -19,7 +19,7 @@ const TaskList = props => {
 
 	return (
 		<table className="table table-dark">
-			<thead>
+			{/* <thead>
 				<tr>
 					<th scope="col">First</th>
 					<th scope="col">Last</th>
@@ -30,7 +30,7 @@ const TaskList = props => {
 					<th scope="col">Handle</th>
 					<th scope="col">Handle</th>
 				</tr>
-			</thead>
+			</thead> */}
 
 			<tbody>{tasks}</tbody>
 		</table>
