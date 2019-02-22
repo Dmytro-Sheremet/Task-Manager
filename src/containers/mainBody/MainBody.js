@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import TaskList from "../../components/taskList/TaskList";
 
-export default function Main() {
+const Main = props => {
 	return (
 		<div>
-			<h1>main body</h1>
+			<TaskList props={props} />
 		</div>
-	)
-}
+	);
+};
+export default Main;
