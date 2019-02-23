@@ -1,10 +1,8 @@
 import React from "react";
-import Machine from "./Machine";
+import Clients from "../../data/Clients";
+import Client from "./Client";
 
-import Machines from "../../data/Machines";
-
-const MachineList = () => {
-	console.log(Machines);
+const ClientList = () => {
 	return (
 		<div className="my-3">
 			<h6
@@ -15,16 +13,16 @@ const MachineList = () => {
 					textAlign: "center"
 				}}
 			>
-				machinelist{" "}
+				Clientlist{" "}
 			</h6>
 
 			<div class="card">
-				{Machines.map((machine, index) => (
-					<Machine key={index} machine={machine} />
+				{Clients.map((client, index) => (
+					<Client key={index} client={client} />
 				))}
 			</div>
 		</div>
 	);
 };
 
-export default MachineList;
+export default ClientList

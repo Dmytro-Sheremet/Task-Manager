@@ -2,6 +2,7 @@ import React from "react";
 import TaskList from "../../components/taskList/TaskList";
 import AddTask from "../../components/management/AddTask";
 import MachineList from "../../components/machineList/MachineList";
+import ClientList from "../../components/clientList/ClientList";
 
 const Main = props => {
 	return (
@@ -14,10 +15,10 @@ const Main = props => {
 					<MachineList />
 				</div>
 				<div className="col">
-					<h1>clients info placeholder</h1>
+					<ClientList />
 				</div>
 			</div>
-			<TaskList props={props} />
+			<TaskList />
 		</div>
 	);
 };
