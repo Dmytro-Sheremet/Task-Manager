@@ -6,11 +6,18 @@ const TaskList = props => {
 			<tr key={index}>
 				<td>{task.id}</td>
 				<td>{task.client}</td>
-				<td>{task.priority}</td>
+				<td className="font-weight-bold">{task.priority}</td>
 				<td>{task.machine}</td>
 				<td>{task.taskText}</td>
 				<td>{task.dateAdded}</td>
-				<td>{task.status}</td>
+				<td>
+					{task.status}
+					{`   `}
+					<i
+						onClick={props.props.click.bind(this, task.client)}
+						className="fas fa-sort-down"
+					/>
+				</td>
 				<td>{task.dateDeadline}</td>
 			</tr>
 		);
@@ -18,7 +25,7 @@ const TaskList = props => {
 	// console.log(props);
 
 	return (
-		<table className="table table-dark">
+		<table className="table table-dark bg-secondary">
 			{/* <thead>
 				<tr>
 					<th scope="col">First</th>

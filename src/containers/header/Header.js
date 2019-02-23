@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
 
 export default function Header() {
 	return (
 		<div>
-			<h1>Production Manager</h1>
+			<Navbar />
 		</div>
-	)
+	);
 }
