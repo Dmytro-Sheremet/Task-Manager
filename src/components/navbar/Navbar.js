@@ -1,33 +1,40 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 	return (
 		<nav class="navbar  navbar-expand-sm bg-secondary navbar-dark  py-0">
 			<div class="container ">
-				<a href="/" className="navbar-brand">
+				<Link to="/" className="navbar-brand">
 					Production Manager
-				</a>
+				</Link>
 				<div>
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item">
-							<a href="/" className="nav-link">
+							<Link to="/" className="nav-link">
 								Home
-							</a>
+							</Link>
 						</li>
+
 						<li className="nav-item">
-							<a href="/" className="nav-link">
-								Add Task
-							</a>
-						</li>
-						<li className="nav-item">
-							<a href="/" className="nav-link">
+							<Link to="/tasklist" className="nav-link">
 								Tasks
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="/" className="nav-link">
-								Help
-							</a>
+							<Link to="/addtask" className="nav-link">
+								Add Task
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/machinelist" className="nav-link">
+								Machines
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/clientlist" className="nav-link">
+								Clients
+							</Link>
 						</li>
 					</ul>
 				</div>
