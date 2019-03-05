@@ -1,18 +1,23 @@
 import React from 'react';
 import Machine from './Machine';
-
-import Machines from '../../data/Machines';
+import { Consumer } from '../../context';
 
 const MachineList = () => {
-	console.log(Machines);
 	return (
-		<div className="container">
-			<div class="card ">
-				{Machines.map((machine, index) => (
-					<Machine key={index} machine={machine} />
-				))}
-			</div>
-		</div>
+		<Consumer>
+			{value => {
+				const { machines } = value;
+				return (
+					<div className='container'>
+						<div class='card '>
+							{machines.map((machine, index) => (
+								<Machine key={index} machine={machine} />
+							))}
+						</div>
+					</div>
+				);
+			}}
+		</Consumer>
 	);
 };
 

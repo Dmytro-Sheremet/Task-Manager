@@ -1,16 +1,23 @@
 import React from 'react';
-import Clients from '../../data/Clients';
 import Client from './Client';
+import { Consumer } from '../../context';
 
 const ClientList = () => {
 	return (
-		<div className="container">
-			<div class="card">
-				{Clients.map((client, index) => (
-					<Client key={index} client={client} />
-				))}
-			</div>
-		</div>
+		<Consumer>
+			{value => {
+				const { clients } = value;
+				return (
+					<div className='container'>
+						<div class='card'>
+							{clients.map((client, index) => (
+								<Client key={index} client={client} />
+							))}
+						</div>
+					</div>
+				);
+			}}
+		</Consumer>
 	);
 };
 

@@ -1,0 +1,15 @@
+.homePage {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 0px;
+  }
+
+  .mainFrame {
+    height: 75vh;
+    background-image: url("../../data/img/homescreen-background.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
